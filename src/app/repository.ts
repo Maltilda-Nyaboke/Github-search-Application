@@ -1,2 +1,4 @@
-export class Repository {
+export interface Repository {
+id:number;
+name:string;
 }
