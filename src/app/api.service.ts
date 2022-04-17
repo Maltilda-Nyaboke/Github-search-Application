@@ -1,6 +1,7 @@
 import {HttpClient} from '@angular/common/http';
 import { Injectable } from '@angular/core';
 import { Observable } from 'rxjs';
+import { environment } from 'src/environments/environment';
 import {User} from './user';
 
 
@@ -10,10 +11,8 @@ import {User} from './user';
 
 
 export class ApiService {
-  getUser() {
-    throw new Error('Method not implemented.');
-  }
- user ='Maltilda-Nyaboke';
+  accessToken: string = environment.accessToken;
+ user ='SKHinga';
   user_url:string =`https://api.github.com/users/${this.user}`
   repo_url:string =`https://api.github.com/users/${this.user}/repos`
   constructor(private http:HttpClient) { }

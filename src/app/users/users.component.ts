@@ -9,12 +9,18 @@ import { ApiService } from '../api.service';
 })
 export class UsersComponent implements OnInit {
 user:any;
+userRepos:any;
   constructor(private UserService: ApiService) { }
 
   ngOnInit(): void {
   this.UserService.getUsers().subscribe(
     data => {this.user =data;
       console.log(this.user);
+    }
+  )
+  this.UserService.getRepos().subscribe(
+    data => {this.userRepos=data;
+      console.log(this.userRepos);
     }
   )
   }
