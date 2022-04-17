@@ -1,5 +1,9 @@
 <div class="container">
     <img src="{{user.avatar_url}}" alt="" width="50px">
+    <form #submitForm="ngForm">
+    <input type="text" name="username" id="username" [(ngModel)]="user.login">
+    <button type="submit">Enter</button>
+</form>
     <h1>{{user.login}}</h1>
 </div>
  

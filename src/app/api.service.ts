@@ -12,7 +12,7 @@ import {User} from './user';
 
 export class ApiService {
   accessToken: string = environment.accessToken;
- user ='SKHinga';
+ user ='Maltilda-Nyaboke';
   user_url:string =`https://api.github.com/users/${this.user}`
   repo_url:string =`https://api.github.com/users/${this.user}/repos`
   constructor(private http:HttpClient) { }
