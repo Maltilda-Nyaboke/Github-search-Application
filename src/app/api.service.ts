@@ -10,11 +10,11 @@ import {User} from './user';
 
 
 export class ApiService {
-
-  github_url:string ='https://jsonplaceholder.typicode.com/'
+ User ='Maltilda-Nyaboke';
+  github_url:string =`https://api.github.com/users/${this.User}`
   constructor(private http:HttpClient) { }
-  getUsers():Observable<User>{
-    return this.http.get<User>(this.github_url + 'users')
+  getUsers():Observable<any>{
+    return this.http.get<any>(this.github_url)
   } 
 
 }

@@ -13,7 +13,8 @@ users: User[] =[]
 
   ngOnInit(): void {
   this.UserService.getUsers().subscribe(
-    data => console.log(data)
+    data => {this.users =data;
+      console.log(data);}
   )
   }
 

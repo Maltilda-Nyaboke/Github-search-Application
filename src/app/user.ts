@@ -1,5 +1,5 @@
  export interface User {
-avatar: string
+avatar_url: string
 name:string;
 username:string;
 followers:number;
