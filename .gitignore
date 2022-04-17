@@ -42,4 +42,4 @@ testem.log
 Thumbs.db
 
 #access key
-/src/environment/**
+environment.ts
