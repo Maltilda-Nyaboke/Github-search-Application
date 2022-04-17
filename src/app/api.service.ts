@@ -14,10 +14,13 @@ export class ApiService {
     throw new Error('Method not implemented.');
   }
  user ='Maltilda-Nyaboke';
-  github_url:string =`https://api.github.com/users/${this.user}`
+  user_url:string =`https://api.github.com/users/${this.user}`
+  repo_url:string =`https://api.github.com/users/${this.user}/repos`
   constructor(private http:HttpClient) { }
   getUsers():Observable<any>{
-    return this.http.get<any>(this.github_url)
+    return this.http.get<any>(this.user_url)
   } 
-
+getRepos():Observable<any>{
+  return this.http.get<any>(this.repo_url)
+}
 }
