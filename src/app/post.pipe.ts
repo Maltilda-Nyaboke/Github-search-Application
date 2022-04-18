@@ -1,12 +1,13 @@
 import { Pipe, PipeTransform } from '@angular/core';
+import { interval,Observable,Observer } from 'rxjs';
 
 @Pipe({
   name: 'post'
 })
 export class PostPipe implements PipeTransform {
 
-  transform(value: unknown, ...args: unknown[]): any {
-    if (value){
+  transform(value:any): any {
+    const seconds = Math.abs((value)/1000);
       const intervals:any = {
         'year': 31536000,
         'month': 2592000,
@@ -16,7 +17,17 @@ export class PostPipe implements PipeTransform {
         'minute': 60,
         'second': 1
     };
+    let counter;
+    for(const i in intervals){
+      counter= Math.floor(seconds/intervals[i]);
+      if (counter > 0)
+      if (counter === 1){
+        return counter + '' + i + 'ago';
+      }else{
+        return counter + '' + i + 's ago'
+      }
     }
+  return 0;
   }
 
 }
