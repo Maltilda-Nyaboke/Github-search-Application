@@ -15,11 +15,19 @@
     border: none;
     height: 40px;
 }
-.card{
-background-color: #2A2D33;
+.card-one{
+    background-color: #2A2D33;
 color: white;
 height: 40vh;
 margin-top: 200px;
+}
+.card-two{
+background-color: #2A2D33;
+color: white;
+display: flex;
+ flex-flow: row;
+flex-wrap: wrap;
+width: 100%;
 }
 input{
     margin-top: 15px;
