@@ -64,11 +64,11 @@
         </div>
         </div>
         <div class="col-md-8">
-            <div class="card" style="width: 18rem;">
+            <div class="card" style="width: 18rem;" *ngFor="let repo of userRepos">
                 <div class="card-body">
-                  <h5 class="card-title">Special title treatment</h5>
-                  <p class="card-text">With supporting text below as a natural lead-in to additional content.</p>
-                  <a href="#" class="btn btn-primary">Go somewhere</a>
+                  <h5 class="card-title">{{repo.name}}</h5>
+                  <p class="card-text">{{repo.description}}</p>
+                  <a href="{{repo.html_url}}" target="_blank" class="btn">View</a>
                 </div>
               </div>
         </div>

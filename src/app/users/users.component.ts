@@ -10,7 +10,7 @@ import { LandingComponent } from '../landing/landing.component';
 })
 export class UsersComponent implements OnInit {
   username: any;
-  userRepos: any;
+  userRepos!: any;
   githubUser!: User;
 
   constructor(private UserService: ApiService) { }
