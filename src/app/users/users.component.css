@@ -1,5 +1,5 @@
-.container-fluid{
-    
+.landing{
+ background-color: #19CC8B;
     color: #2A2D33;
 }
 .fa-github{
@@ -22,8 +22,9 @@ height: 40vh;
 margin-top: 200px;
 }
 .card-two{
-background-color: #2A2D33;
-color: white;
+background-color: transparent;
+border: 2px solid #2A2D33;
+color: black;
 display: flex;
  flex-flow: row;
 flex-wrap: wrap;
