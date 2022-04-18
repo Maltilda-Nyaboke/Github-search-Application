@@ -27,7 +27,8 @@
                   <div class="card-text"><form (ngSubmit)="enter()">
                     <input type="text" name="username" id="username" [(ngModel)]="username">
                     <div class="butt mt-5">
-                        <button type="submit">Enter</button>
+                        <a href="#repo" target="_blank" class="btn">Enter</a>
+                        <!-- <button type="submit">Enter</button> -->
                     </div>
                 </form>
                 
@@ -39,6 +40,10 @@
             
         </div>
         <div class="col-md-4"></div>
+    </div>
+    <div class="repo" id="repo">
+        <img src="{{githubUser.avatar_url}}" alt="profile picture">
+    <h3>{{githubUser.login}}</h3>
     </div>
 </div>
 
