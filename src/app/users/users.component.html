@@ -18,12 +18,25 @@
 <div class="container-fluid">
     <div class="row">
         <div class="col-md-3"></div>
-        <div class="col-md-6">
+        <div class="col-md-6 justify-content-center align-items-center mt-5">
             <h2>SEARCH FOR YOUR GITHUB</h2>
-            <form (ngSubmit)="enter()">
-                <input type="text" name="username" id="username" [(ngModel)]="username">
-                <button type="submit">Enter</button>
-            </form>
+            <i class="fa-brands fa-github"></i>
+            <div class="card text-center" style="width: 18rem;">
+                <div class="card-body">
+                  <h5 class="card-title">Enter Github username</h5>
+                  <div class="card-text"><form (ngSubmit)="enter()">
+                    <input type="text" name="username" id="username" [(ngModel)]="username">
+                    <div class="butt mt-5">
+                        <button type="submit">Enter</button>
+                    </div>
+                    
+                </form>
+            </div>
+                  <!-- <a href="#" class="btn btn-primary">Go somewhere</a> -->
+                </div>
+              </div>
+              
+            
         </div>
         <div class="col-md-3"></div>
     </div>
