@@ -8,21 +8,40 @@ import { ApiService } from '../api.service';
   styleUrls: ['./users.component.css']
 })
 export class UsersComponent implements OnInit {
-user:any;
-userRepos:any;
+  username: any;
+  userRepos: any;
+  githubUser!: User;
+
   constructor(private UserService: ApiService) { }
 
-  ngOnInit(): void {
-  this.UserService.getUsers().subscribe(
-    data => {this.user =data;
-      console.log(this.user);
-    }
-  )
-  this.UserService.getRepos().subscribe(
-    data => {this.userRepos=data;
-      console.log(this.userRepos);
-    }
-  )
+  enter() {
+    this.UserService.updateUser(this.username);
+    this.UserService.getUsers().subscribe(
+      data => {
+        this.githubUser = data;
+      }
+    )
+    this.UserService.getRepos().subscribe(
+      repo => {
+        this.userRepos = repo
+      }
+    )
   }
+
+  ngOnInit(): void {
+    this.UserService.getUsers().subscribe(
+      data => {
+        this.githubUser = data;
+        console.log(this.githubUser);
+      }
+    )
+    this.UserService.getRepos().subscribe(
+      data => {
+        this.userRepos = data;
+        console.log(this.userRepos);
+      }
+    )
+  }
+  
 
 }

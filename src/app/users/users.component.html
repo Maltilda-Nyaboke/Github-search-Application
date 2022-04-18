@@ -1,9 +1,18 @@
 <div class="container">
-    <img src="{{user.avatar_url}}" alt="" width="50px">
-    <form #submitForm="ngForm">
-    <input type="text" name="username" id="username" [(ngModel)]="user.login">
+    <img src="{{githubUser.avatar_url}}" alt="" width="50px">
+    <form (ngSubmit)="enter()">
+    <input type="text" name="username" id="username" [(ngModel)]="username">
     <button type="submit">Enter</button>
 </form>
-    <h1>{{user.login}}</h1>
+    <h1>{{githubUser.login}}</h1>
+    <p>{{githubUser.public_repos}}</p>
+    <p>{{githubUser.avatar_url}}</p>
+    <div>
+        <ul *ngFor="let repo of userRepos">
+            <li>
+                {{repo.name}}
+            </li>
+        </ul>
+    </div>
 </div>
  
