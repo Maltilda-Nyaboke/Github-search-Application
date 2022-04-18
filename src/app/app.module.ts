@@ -8,13 +8,15 @@ import { ApiService } from './api.service';
 import { RepositoryComponent } from './repository/repository.component';
 import { FormsModule } from '@angular/forms';
 import { PostPipe } from './post.pipe';
+import { LandingComponent } from './landing/landing.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     UsersComponent,
     RepositoryComponent,
-    PostPipe
+    PostPipe,
+    LandingComponent
   ],
   imports: [
     BrowserModule,
