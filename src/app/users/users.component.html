@@ -1,4 +1,4 @@
-<div class="container">
+<!-- <div class="container">
     <img src="{{githubUser.avatar_url}}" alt="" width="50px">
     <form (ngSubmit)="enter()">
     <input type="text" name="username" id="username" [(ngModel)]="username">
@@ -14,5 +14,19 @@
             </li>
         </ul>
     </div>
+</div> -->
+<div class="container-fluid">
+    <div class="row">
+        <div class="col-md-3"></div>
+        <div class="col-md-6">
+            <h2>SEARCH FOR YOUR GITHUB</h2>
+            <form (ngSubmit)="enter()">
+                <input type="text" name="username" id="username" [(ngModel)]="username">
+                <button type="submit">Enter</button>
+            </form>
+        </div>
+        <div class="col-md-3"></div>
+    </div>
 </div>
+
  

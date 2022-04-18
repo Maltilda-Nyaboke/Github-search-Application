@@ -1,4 +1,7 @@
 import { Component, OnInit } from '@angular/core';
+import { ApiService } from '../api.service';
+import { User } from '../user';
+import { UsersComponent } from '../users/users.component';
 
 @Component({
   selector: 'app-landing',
