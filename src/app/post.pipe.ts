@@ -15,7 +15,7 @@ export class PostPipe implements PipeTransform {
         'day': 86400,
         'hour': 3600,
         'minute': 60,
-        'second': 1
+        'second': 1,
     };
     let counter;
     for(const i in intervals){
@@ -27,7 +27,7 @@ export class PostPipe implements PipeTransform {
         return counter + '' + i + 's ago'
       }
     }
-  return 0;
+  return value;
   }
 
 }

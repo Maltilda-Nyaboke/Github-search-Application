@@ -29,8 +29,8 @@
                         <form (ngSubmit)="enter()">
                             <input type="text" name="username" id="username" [(ngModel)]="username">
                             <div class="butt mt-5">
-                                <a href="#" type="submit" class="btn">Enter</a>
-                                <!-- <button type="submit">Enter</button> -->
+                                <a href="#repo" class="btn"><button type="submit">Enter</button></a>
+                                
                             </div>
                         </form>
 
@@ -69,9 +69,9 @@
             <div class="card-two mt-5" style="width: 18rem;" *ngFor="let repo of userRepos">
                 <div class="card-body">
                   <h5 class="card-title">{{repo.name}}</h5>
-                  <p class="card-text">{{repo.description}}
-                      {{repo.created_at|date}}
+                  <p class="card-text">{{repo.description}}<br>
                   </p>
+                  <h6 class="card-text">{{repo.language}} {{repo.created_at|date}}</h6>
                   <a href="{{repo.html_url}}" target="_blank" class="btn">View</a>
                   
                 </div>
