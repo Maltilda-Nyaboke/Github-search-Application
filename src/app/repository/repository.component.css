@@ -1,4 +1,24 @@
-.card-two{
+
+    .btn{
+        background-color: #19CC8B;
+        outline: none;
+        width: 120px;
+        border: none;
+        height: 40px;
+    }
+    .butt button{
+    background-color: transparent;
+    color: white;
+    outline: none;
+    border: none;
+    } 
+    .card-one{
+        background-color: #2A2D33;
+    color: white;
+    height: 40vh;
+    margin-top: 200px;
+    }
+    .card-two{
     background-color: transparent;
     border: 1px solid #2A2D33;
     color: black;
@@ -9,10 +29,17 @@
     width: 100%;
     margin: 20px;
     }
-    .btn{
-        background-color: #19CC8B;
-        outline: none;
-        width: 120px;
-        border: none;
-        height: 40px;
+    input{
+        margin-top: 15px;
     }
+    img{
+        border-radius: 50%;
+        width: 10vw;
+    }
+    .repo h3{
+        margin-top: 20px;
+    }
+    span{
+        font-size: 30px;
+    }
+    
