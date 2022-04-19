@@ -9,6 +9,7 @@ import { RepositoryComponent } from './repository/repository.component';
 import { FormsModule } from '@angular/forms';
 import { PostPipe } from './post.pipe';
 import { LandingComponent } from './landing/landing.component';
+import { RepoDirective } from './repo.directive';
 
 @NgModule({
   declarations: [
@@ -16,7 +17,8 @@ import { LandingComponent } from './landing/landing.component';
     UsersComponent,
     RepositoryComponent,
     PostPipe,
-    LandingComponent
+    LandingComponent,
+    RepoDirective
   ],
   imports: [
     BrowserModule,

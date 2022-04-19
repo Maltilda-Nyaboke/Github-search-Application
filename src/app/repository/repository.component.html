@@ -1,1 +1,19 @@
+<div class="container">
+    <div class="repo">
+        <div class="col-md-4"></div>
+        <div class="col-md-8">
+            <div class="card-two mt-5" style="width: 18rem;" *ngFor="let repo of userRepos">
+                <div class="card-body">
+                  <h5 class="card-title">{{repo.name}}</h5>
+                  <p class="card-text">{{repo.description}}<br>
+                  </p>
+                  <h6 class="card-text">{{repo.language}} {{repo.created_at|date}}</h6>
+                  <a href="{{repo.html_url}}" target="_blank" class="btn">View</a>
+                  
+                </div>
+              </div>
+        </div>
+        <div class="col-md-4"></div>
+    </div>
+</div>
 

@@ -2,6 +2,7 @@ import { Component, OnInit } from '@angular/core';
 import { User } from '../user';
 import { ApiService } from '../api.service';
 import { LandingComponent } from '../landing/landing.component';
+import { Repository } from '../repository';
 
 @Component({
   selector: 'app-users',
