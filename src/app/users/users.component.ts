@@ -3,6 +3,7 @@ import { User } from '../user';
 import { ApiService } from '../api.service';
 import { LandingComponent } from '../landing/landing.component';
 import { Repository } from '../repository';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-users',
@@ -14,7 +15,7 @@ export class UsersComponent implements OnInit {
   userRepos!: any;
   githubUser!: User;
 
-  constructor(private UserService: ApiService) { }
+  constructor(private UserService: ApiService,private router: Router) { }
 
   enter() {
     this.UserService.updateUser(this.username);
@@ -28,6 +29,7 @@ export class UsersComponent implements OnInit {
         this.userRepos = repo
       }
     )
+    this.router.navigateByUrl('repos')
   }
 
   ngOnInit(): void {
