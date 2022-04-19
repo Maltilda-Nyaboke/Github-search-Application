@@ -65,14 +65,15 @@
     
         </div>
         </div>
-        <div class="col-md-8">
+        <div class="col-md-8 row row-cols-1 row-cols-md-3 g-4">
             <div class="card-two d-flex mt-5" style="width: 18rem;" *ngFor="let repo of userRepos" appRepo>
                 <div class="card-body">
                   <h5 class="card-title">{{repo.name}}</h5>
                   <p class="card-text">{{repo.description}}<br>
                   </p>
-                  <h6 class="card-text">{{repo.language}} {{repo.created_at|date}}</h6>
-                  <a href="{{repo.html_url}}" target="_blank" class="btn">View</a>
+                  <h6 class="card-text">{{repo.language}} </h6>
+                      {{repo.created_at|date}}
+                  <a href="{{repo.html_url}}" target="_blank" class="btn m-1">View</a>
                   
                 </div>
               </div>
